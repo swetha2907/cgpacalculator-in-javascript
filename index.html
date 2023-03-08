@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cgpa calculator</title>
+    <style>
+        .box{
+          display: grid;
+          grid-template-areas:
+          'head head head'
+          'side main main'
+          'foot foot foot'
+          ;
+        }
+        #head{
+            background-color: aqua;
+            grid-area: head;
+        }.main{
+            border: 2px solid black;
+            grid-area: main;
+        }
+        .btn{
+            padding: 10px;
+          
+        }
+        body{
+          text-align: left;
+        }
+        button {
+          
+           background-color:yellow; 
+           font-size: larger;
+          
+        }.side{
+          grid-area: side;
+        }
+        .foot{
+            background-color: aqua;
+            grid-area: foot;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div id="head" >
+            <img src="logo.png" alt="error" style="float:right;padding-right: 50px;padding-top: 10px;" weight="100px" height="100px">
+            <h1 style="text-align: center;text-decoration: underline;">NATIONAL ENGINEERING COLLEGE</h1>
+            <H3 STYLE="text-align: center;color:red">NEC - Excellent Institute for Academic Pursuits</H3>
+            <H3 STYLE="text-align: center;font-style: italic;">CGPA CALCULATION</H3>
+
+
+        </div>
+        <div class="side">
+          <h2 style="padding-top: 10px;font-weight: bold;">Reference</h2>
+          <table style="background-color: lightcoral;">
+            <thead style="font-weight: bolder;">
+              <tr>
+                <td>Grade</td>
+                <td>Value</td>
+  
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>O</td><td>10</td>
+              </tr>
+              <tr><td>A+</td><td>9</td></tr>
+              <tr><td>A</td><td>8</td></tr>
+              <tr><td>B+</td><td>7</td></tr>
+              <tr><td>B</td><td>6</td></tr>
+            </tbody>
+          </table>
+          <h2 style="font-size: medium ;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color:red;">NEVER EVER GIVE IT UP</h2>
+  
+        </div>
+        <div class="main">
+          <h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">CGPA CALCULATOR</h2>
+        <div class="btn">
+            <button style="margin-top:10px;" onclick="addCourse()">Add Course</button>
+            <button style="margin-top:10px;"  onclick="removeCourse()">Remove Course</button>
+          </div>
+        <div id="mass">
+             <form class="key">
+              <p> <label id="course-row" for="courses"></label> 
+               <label id="credit-row" for="credit-units"></label>
+             <label id="grade-row" for="grade"></label></p>
+                <input  type="text"  placeholder="Course Code"  class="courses key-0"  required/>
+                <input  type="number"  class="credit-units key-0"  placeholder="Credit Units"  value=""  required/>
+                <select class="grade key-0" required>
+                  <option class="grade" value="select">Grade</option>
+                  <option class="grade" value="10">O</option>
+                  <option class="grade" value="9">A+</option>
+                  <option class="grade" value="8">A</option>
+                  <option class="grade" value="7">B+</option>
+                  <option class="grade" value="6">B</option>
+                  <option class="grade" value="0">F</option>
+                </select>
+            </form> 
+          </div>
+           <div class="btn">
+            <p style="margin-left: 50px;">Click here to Calculate</p>
+            <button style="margin-left: 70px;" onclick="calculate()">Calculate</button>
+          </div> 
+          <div class="last">
+            <p id="cgpa-calc"></p>
+          </div>
+        </div>
+        
+
+       
+      </div>
+      
+      <div class="foot" >
+
+          <h2>For more details :
+
+          </h2>
+          <img src="cont.png" alt="error" style="float:right;padding-bottom: 90px;padding-right: 40px;" height="80px">
+          <p> contact: <a href="https://www.nec.edu.in"> nec.edu.in</a></p>
+          <p>Address:<Address>K.R.Nagar,Kovilpatti-628503</Address></p>
+          <h2 style="padding-bottom:20px;text-align: center ;font-size:xx-larger;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color:red;">ALL IS WELL</h2>
+  
+
+      </div>
+      <script src="net.js">
+
+      </script>
+    
+</body>
+</html>
